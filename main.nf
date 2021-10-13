@@ -6,7 +6,6 @@ params.odm_fp = "$projectDir/data/matrix.odm"
 
 idx_ch = Channel.of( 1..params.n_pods )
 process extract_column {
-  echo true
   input: val i from idx_ch
 
   output: file 'column.rds' into column_ch
