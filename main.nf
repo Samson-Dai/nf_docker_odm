@@ -1,8 +1,8 @@
 #!/usr/bin/env nextflow
 
+params.odm_fp = ""
 params.n_pods = 15
 params.result_dir = "$launchDir"
-params.odm_fp = "$projectDir/data/matrix.odm"
 
 idx_ch = Channel.of( 1..params.n_pods )
 process extract_column {
