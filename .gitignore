@@ -2,3 +2,4 @@
 .nextflow*
 result.rds
 work
+.Rproj.user
