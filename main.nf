@@ -6,6 +6,9 @@ params.result_dir = "$launchDir"
 
 idx_ch = Channel.of( 1..params.n_pods )
 process extract_column {
+  errorStrategy 'retry'
+  maxRetries 4
+
   input:
   val i from idx_ch
   path odm_fp from params.odm_fp
